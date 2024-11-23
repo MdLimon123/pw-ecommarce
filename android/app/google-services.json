@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125936815611",
+    "project_id": "pw-ecrommce",
+    "storage_bucket": "pw-ecrommce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125936815611:android:d16a1b0a8bed13e1074f5e",
+        "android_client_info": {
+          "package_name": "com.example.pw_ecrommarce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgpdKNVIBl5tOFEDs0EmE_i77cDwitVPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
