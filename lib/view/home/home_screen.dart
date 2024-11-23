@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pw_ecrommarce/view/utils/colors.dart';
 import 'package:pw_ecrommarce/view/widgets/custom_app_bar.dart';
@@ -7,6 +8,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    List<String> images = [
+
+      'https://as1.ftcdn.net/v2/jpg/04/65/46/52/1000_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg',
+      'https://as1.ftcdn.net/v2/jpg/04/65/46/52/1000_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg',
+      'https://as1.ftcdn.net/v2/jpg/04/65/46/52/1000_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg',
+    ];
+
     return Scaffold(
       appBar: CustomAppBar(
         leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
@@ -30,7 +39,27 @@ class HomeScreen extends StatelessWidget {
             fontSize: 12,
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor.withOpacity(.5)
-          ),)
+          ),),
+
+          SizedBox(height: 20,),
+          CarouselSlider.builder(
+            itemCount: images.length,
+            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) =>
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryColor,
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(image: NetworkImage(images[itemIndex]),
+                    fit: BoxFit.cover)
+                  ),
+                ),
+            options: CarouselOptions(
+              height: 150,
+              autoPlay: true,
+              enlargeCenterPage: true,
+            enlargeFactor: 0.3
+            ),
+          )
         ],
       ),)
     );
